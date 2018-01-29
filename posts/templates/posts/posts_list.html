@@ -1,13 +1,6 @@
-{% load static from staticfiles %}
+{% extends 'layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My posts</title>
-    <link rel="stylesheet" href="{% static 'style.css'%}">
-</head>
-<body>
+{% block content %}
     <h1>My posts</h1>
     <div class="posts">
         {% for post in posts %}
@@ -18,5 +11,4 @@
         </div>
         {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}

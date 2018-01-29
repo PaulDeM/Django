@@ -17,6 +17,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.posts_list),
-    url(r'^(?P<slug>[\w-]+)/$', views.post_detail),
+    url(r'^$', views.posts_list, name='list'),
+    url(r'^(?P<slug>[\w-]+)/$', views.post_detail, name='detail'),
 ]
