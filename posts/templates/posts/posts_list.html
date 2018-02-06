@@ -5,7 +5,7 @@
     <div class="posts">
         {% for post in posts %}
         <div class="post">
-            <h2><a href="#"> {{post.title}}</a> </h2>
+            <h2><a href="{% url 'posts:detail' slug=post.slug %}">{{post.title}}</a> </h2>
             <p>{{post.date}}</p>
             <p>{{post.snippet}}</p>
         </div>
