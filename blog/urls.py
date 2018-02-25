@@ -22,6 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('accounts.urls')),
     # urls from post app
     url(r'^posts/', include('posts.urls')),
     url(r'^bio/$', views.bio),
